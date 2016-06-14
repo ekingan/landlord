@@ -1,16 +1,14 @@
 %div{:class => "navbar navbar-default navbar-fixed-top", :role => 'navigation' }
   %div{:class => "container-fluid"}
     %div{:class => "navbar-header"}
-       %button{:type => "button", :class => "navbar-toggle",  :data-toggle => "collapse" :data-target => '.navbar-collapse' :aria-expanded => "false"}
-        %span (:class => "sr-only") Toggle navigation
-        %span (:class => "icon-bar")
-        %span (:class => "icon-bar")
-        %span (:class => "icon-bar")
-      
-      %a class="navbar-brand" href="/"> XfitFinder </a> 
+      %button{:type => "button", :class => "navbar-toggle",  :data-toggle => "collapse" :data-target => '.navbar-collapse' :aria-expanded => "false"}
+      %span{:class => "sr-only"} Toggle navigation
+      %span{:class => "icon-bar"}
+      %span{:class => "icon-bar"}
+      %span{:class => "icon-bar"}
+      %a{class: "navbar-brand", href:"/"} XfitFinder 
     </div><!--  nav-bar header end -->
-    <div class="navbar-collapse collapse">
-       <!-- Logged in state -->
+    %div{class:"navbar-collapse collapse"}
       <% if current_user %>
       <ul class="nav navbar-nav navbar-right">
         <li class='active'><a href="/logout" id="logout-btn">Logout</a></li>   
@@ -24,8 +22,5 @@
           </ul>
       <% end %>
       <!-- end user not logged in -->  
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</div> <!-- end navbar -->
 
 
